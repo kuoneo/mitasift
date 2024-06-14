@@ -1,10 +1,30 @@
 import streamlit as st
+import pandas as pd
 
 st.title("システム仕様書")
 st.header("1. システム概要")
 st.write("本システムは、PythonのStreamlitを使用して開発されたウェブアプリケーションであり、アルバイトのシフト作成を容易にすることを目的としています。主な機能として、ログインと予定入力が一緒になったページと、管理者画面の2つのページから構成されています。")
 st.write("ログイン名とパスワードは以下の通りである")
-st.write('"admin": "admin", "tanaka": "tana", "satou": "sato", "mitani": "mita","suzuki":"suzu","yamada":"yama","takahashi":"taka","watanabe":"wata","ito":"ito","nakamura":"naka","kobayashi":"koba","kato":"kato","yoshida":"yoshi","ishikawa":"ishi","sasaki":"sasa","kawamoto":"kawa","kimura":"kimu","fujiwara":"fuji","hayashi":"haya","matsumoto":"matsu","inoue":"inou","okamoto":"oka","saito":"sait","nishimura":"nishi","endo":"endo","morita":"mori","yamaguchi":"yama","shimizu":"shim","kondo":"kond","takeda":"take","ueda":"ueda","noguchi":"nogu","mori":"mori","taniguchi":"tani","abe":"abe","sakamoto":"saka","nagai":"naga","miyamoto":"miya","fujita":"fuji","okada":"oka"')
+# データを辞書型で定義
+data = {
+    "admin": "admin", "tanaka": "tana", "satou": "sato", "mitani": "mita",
+    "suzuki": "suzu", "yamada": "yama", "takahashi": "taka", "watanabe": "wata",
+    "ito": "ito", "nakamura": "naka", "kobayashi": "koba", "kato": "kato",
+    "yoshida": "yoshi", "ishikawa": "ishi", "sasaki": "sasa", "kawamoto": "kawa",
+    "kimura": "kimu", "fujiwara": "fuji", "hayashi": "haya", "matsumoto": "matsu",
+    "inoue": "inou", "okamoto": "oka", "saito": "sait", "nishimura": "nishi",
+    "endo": "endo", "morita": "mori", "yamaguchi": "yama", "shimizu": "shim",
+    "kondo": "kond", "takeda": "take", "ueda": "ueda", "noguchi": "nogu",
+    "mori": "mori", "taniguchi": "tani", "abe": "abe", "sakamoto": "saka",
+    "nagai": "naga", "miyamoto": "miya", "fujita": "fuji", "okada": "oka"
+}
+
+# データをPandasのDataFrameに変換
+df = pd.DataFrame(list(data.items()), columns=['姓', '略名'])
+
+# Streamlitで表を表示
+st.write(df)
+
 st.header("2. 機能要件")
 st.subheader("2.1 ログインと予定入力ページ")
 st.write("・ログインフォームを備え、ログインしたユーザーの名前を表示する機能が存在します。")
