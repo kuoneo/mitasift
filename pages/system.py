@@ -20,7 +20,7 @@ data = {
 }
 
 # データをPandasのDataFrameに変換
-df = pd.DataFrame(list(data.items()), columns=['姓', '略名'])
+df = pd.DataFrame(list(data.items()), columns=['name', 'pass'])
 
 # Streamlitで表を表示
 st.write(df)
