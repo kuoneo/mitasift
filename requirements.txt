@@ -1,0 +1,4 @@
+pandas==2.2.2
+streamlit==1.35.0
+jsonschema==4.22.0
+jsonschema-specifications==2023.12.1

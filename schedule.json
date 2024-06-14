@@ -1,0 +1,113 @@
+{
+    "mitani": {
+        "月曜日": {
+            "status": "OK",
+            "start_time": "17:00",
+            "end_time": "23:00"
+        },
+        "火曜日": {
+            "status": "△",
+            "start_time": "19:00",
+            "end_time": "23:00"
+        },
+        "水曜日": {
+            "status": "△",
+            "start_time": "17:00",
+            "end_time": "21:15"
+        },
+        "木曜日": {
+            "status": "NG",
+            "start_time": "x",
+            "end_time": "x"
+        },
+        "金曜日": {
+            "status": "OK",
+            "start_time": "17:00",
+            "end_time": "23:00"
+        },
+        "土曜日": {
+            "status": "OK",
+            "start_time": "17:00",
+            "end_time": "23:00"
+        },
+        "日曜日": {
+            "status": "OK",
+            "start_time": "17:00",
+            "end_time": "23:00"
+        }
+    },
+    "tanaka": {
+        "月曜日": {
+            "status": "NG",
+            "start_time": "x",
+            "end_time": "x"
+        },
+        "火曜日": {
+            "status": "OK",
+            "start_time": "17:00",
+            "end_time": "23:00"
+        },
+        "水曜日": {
+            "status": "OK",
+            "start_time": "17:00",
+            "end_time": "23:00"
+        },
+        "木曜日": {
+            "status": "OK",
+            "start_time": "17:00",
+            "end_time": "23:00"
+        },
+        "金曜日": {
+            "status": "OK",
+            "start_time": "17:00",
+            "end_time": "23:00"
+        },
+        "土曜日": {
+            "status": "OK",
+            "start_time": "17:00",
+            "end_time": "23:00"
+        },
+        "日曜日": {
+            "status": "OK",
+            "start_time": "17:00",
+            "end_time": "23:00"
+        }
+    },
+    "satou": {
+        "月曜日": {
+            "status": "OK",
+            "start_time": "17:00",
+            "end_time": "23:00"
+        },
+        "火曜日": {
+            "status": "△",
+            "start_time": "19:00",
+            "end_time": "23:00"
+        },
+        "水曜日": {
+            "status": "△",
+            "start_time": "17:00",
+            "end_time": "21:15"
+        },
+        "木曜日": {
+            "status": "NG",
+            "start_time": "x",
+            "end_time": "x"
+        },
+        "金曜日": {
+            "status": "OK",
+            "start_time": "17:00",
+            "end_time": "23:00"
+        },
+        "土曜日": {
+            "status": "OK",
+            "start_time": "17:00",
+            "end_time": "23:00"
+        },
+        "日曜日": {
+            "status": "OK",
+            "start_time": "17:00",
+            "end_time": "23:00"
+        }
+    }
+}
