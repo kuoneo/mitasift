@@ -53,7 +53,7 @@ if st.session_state.missing:
 ok_count = filtered_status_df.apply(lambda x: x.value_counts().get('OK', 0), axis=0)
 
 # 必要な人員数と比較する
-st.subheader("必要な人員数を入力してください"）
+st.subheader("必要な人員数を入力してください")
 col = st.columns(len(days_of_week))
 needlist={}
 for i, day in enumerate(days_of_week):
