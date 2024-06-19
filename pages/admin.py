@@ -8,7 +8,7 @@ days_of_week = ["月曜日", "火曜日", "水曜日", "木曜日", "金曜日",
 st.title("管理者用")
 
 
-st.write("提出された予定")
+st.subheader("提出された予定")
 # JSONファイルからデータを読み込む
 with open('schedule.json', 'r', encoding='utf-8') as file:
     data = json.load(file)
@@ -48,15 +48,17 @@ if st.session_state.missing:
     else:
         st.write(missing_names)
 
-col = st.columns(len(days_of_week))
-needlist={}
+
 #"OK" の数をカウントする
 ok_count = filtered_status_df.apply(lambda x: x.value_counts().get('OK', 0), axis=0)
 
 # 必要な人員数と比較する
+st.subheader("必要な人員数を入力してください"）
+col = st.columns(len(days_of_week))
+needlist={}
 for i, day in enumerate(days_of_week):
     with col[i]:
         need = st.selectbox(day, [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10], key=f"{day}_selectbox")
         st.write( f"OK数: {ok_count[i]}")
-st.write(ok_count[2])
+
         
