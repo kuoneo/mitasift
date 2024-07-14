@@ -8,7 +8,7 @@ days_of_week = ["月曜日", "火曜日", "水曜日", "木曜日", "金曜日",
 st.title("管理者用")
 
 
-st.subheader("提出された予定")
+st.write("提出された予定")
 # JSONファイルからデータを読み込む
 with open('schedule.json', 'r', encoding='utf-8') as file:
     data = json.load(file)
@@ -33,6 +33,7 @@ def highlight_status(val):
 
 # 表形式で表示
 st.dataframe(filtered_status_df.style.applymap(highlight_status))
+editdf=st.data_editor(filtered_status_df.style.applymap(highlight_status))
 
 #未提出者をボタンで表示させる
 if 'missing' not in st.session_state:
@@ -48,17 +49,62 @@ if st.session_state.missing:
     else:
         st.write(missing_names)
 
+col = st.columns(len(days_of_week))
+needlist={}
+needrank={}
+namerank={}
+for name,_ in data.items():
+    namerank[name]=0
 
 #"OK" の数をカウントする
 ok_count = filtered_status_df.apply(lambda x: x.value_counts().get('OK', 0), axis=0)
 
 # 必要な人員数と比較する
-st.subheader("必要な人員数を入力してください")
-col = st.columns(len(days_of_week))
-needlist={}
 for i, day in enumerate(days_of_week):
     with col[i]:
         need = st.selectbox(day, [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10], key=f"{day}_selectbox")
         st.write( f"OK数: {ok_count[i]}")
+        needlist[day]=need
+        needrank[day]=ok_count[i]-need
+sorted_rank=sorted(needrank.items(),key=lambda x:x[1])
+sorted_rank={k:v for k,v in sorted_rank}
+#st.write(namerank)
 
-        
+
+
+sifu={}
+for i in days_of_week:
+    sifu[i]=[]
+
+for i,day in enumerate(sorted_rank):
+    kai=needlist[day]
+    k=0
+    namerank=sorted(namerank.items(),key=lambda x:x[1])
+    namerank={k:v for k,v in namerank}
+    #st.write(namerank)
+    for name in namerank:
+        schedule=data[name]
+        if k ==kai:
+            break
+        else:
+            if schedule[day]["status"] == "OK":
+                sifu[day].append((name,f"{schedule[day]['start_time']}-{schedule[day]['end_time']}"))
+                k+=1
+                namerank[name]+=1
+
+#st.write(sifu)
+
+cdata=data
+for name,schedule in cdata.items():
+    for day in schedule:
+        schedule[day]=""
+
+
+
+for day,yo in sifu.items():
+    for name,ji in yo:
+        cdata[name][day]=ji
+
+
+cdf=pd.DataFrame(cdata).T
+editdf=st.data_editor(cdf)
