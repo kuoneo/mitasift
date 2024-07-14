@@ -33,7 +33,6 @@ def highlight_status(val):
 
 # 表形式で表示
 st.dataframe(filtered_status_df.style.applymap(highlight_status))
-editdf=st.data_editor(filtered_status_df.style.applymap(highlight_status))
 
 #未提出者をボタンで表示させる
 if 'missing' not in st.session_state:
@@ -55,7 +54,7 @@ needrank={}
 namerank={}
 for name,_ in data.items():
     namerank[name]=0
-
+st.header("必要な人員数")
 #"OK" の数をカウントする
 ok_count = filtered_status_df.apply(lambda x: x.value_counts().get('OK', 0), axis=0)
 
@@ -105,6 +104,6 @@ for day,yo in sifu.items():
     for name,ji in yo:
         cdata[name][day]=ji
 
-
+st.header("シフト表")
 cdf=pd.DataFrame(cdata).T
 editdf=st.data_editor(cdf)
