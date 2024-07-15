@@ -47,14 +47,14 @@ if st.session_state.missing:
         st.write("未提出者はいません")
     else:
         st.write(missing_names)
-
+st.subheader("必要な人員数")
 col = st.columns(len(days_of_week))
 needlist={}
 needrank={}
 namerank={}
 for name,_ in data.items():
     namerank[name]=0
-st.header("必要な人員数")
+
 #"OK" の数をカウントする
 ok_count = filtered_status_df.apply(lambda x: x.value_counts().get('OK', 0), axis=0)
 
@@ -104,6 +104,6 @@ for day,yo in sifu.items():
     for name,ji in yo:
         cdata[name][day]=ji
 
-st.header("シフト表")
+st.subheader("シフト表")
 cdf=pd.DataFrame(cdata).T
 editdf=st.data_editor(cdf)
