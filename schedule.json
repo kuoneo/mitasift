@@ -146,5 +146,116 @@
             "start_time": "x",
             "end_time": "x"
         }
+    },
+    "yamada": {
+        "月曜日": {
+            "status": "OK",
+            "start_time": "17:00",
+            "end_time": "23:00"
+        },
+        "火曜日": {
+            "status": "OK",
+            "start_time": "17:00",
+            "end_time": "23:00"
+        },
+        "水曜日": {
+            "status": "OK",
+            "start_time": "17:00",
+            "end_time": "23:00"
+        },
+        "木曜日": {
+            "status": "OK",
+            "start_time": "17:00",
+            "end_time": "23:00"
+        },
+        "金曜日": {
+            "status": "OK",
+            "start_time": "17:00",
+            "end_time": "23:00"
+        },
+        "土曜日": {
+            "status": "OK",
+            "start_time": "17:00",
+            "end_time": "23:00"
+        },
+        "日曜日": {
+            "status": "OK",
+            "start_time": "17:00",
+            "end_time": "23:00"
+        }
+    },
+    "ito": {
+        "月曜日": {
+            "status": "NG",
+            "start_time": "x",
+            "end_time": "x"
+        },
+        "火曜日": {
+            "status": "OK",
+            "start_time": "17:00",
+            "end_time": "23:00"
+        },
+        "水曜日": {
+            "status": "NG",
+            "start_time": "x",
+            "end_time": "x"
+        },
+        "木曜日": {
+            "status": "OK",
+            "start_time": "17:00",
+            "end_time": "23:00"
+        },
+        "金曜日": {
+            "status": "NG",
+            "start_time": "x",
+            "end_time": "x"
+        },
+        "土曜日": {
+            "status": "OK",
+            "start_time": "17:00",
+            "end_time": "23:00"
+        },
+        "日曜日": {
+            "status": "NG",
+            "start_time": "x",
+            "end_time": "x"
+        }
+    },
+    "inoue": {
+        "月曜日": {
+            "status": "OK",
+            "start_time": "17:00",
+            "end_time": "23:00"
+        },
+        "火曜日": {
+            "status": "NG",
+            "start_time": "x",
+            "end_time": "x"
+        },
+        "水曜日": {
+            "status": "OK",
+            "start_time": "17:00",
+            "end_time": "23:00"
+        },
+        "木曜日": {
+            "status": "NG",
+            "start_time": "x",
+            "end_time": "x"
+        },
+        "金曜日": {
+            "status": "OK",
+            "start_time": "17:00",
+            "end_time": "23:00"
+        },
+        "土曜日": {
+            "status": "OK",
+            "start_time": "17:00",
+            "end_time": "23:00"
+        },
+        "日曜日": {
+            "status": "NG",
+            "start_time": "x",
+            "end_time": "x"
+        }
     }
 }
