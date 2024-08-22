@@ -4,6 +4,7 @@ import streamlit as st
 from datetime import time
 import json  # JSONを扱うためにインポートします
 
+st.set_page_config(layout="wide", initial_sidebar_state="collapsed")
 # JSONファイルからスケジュールを読み込む関数
 def load_schedule_from_json(username, filename="schedule.json"):
     try:
@@ -22,7 +23,7 @@ def display_schedule(schedule):
         st.write("保存された予定はありません。")
 
 # ユーザー認証情報
-keylist = {"admin": "admin", "tanaka": "tana", "satou": "sato", "mitani": "mita","suzuki":"suzu","yamada":"yama","takahashi":"taka","watanabe":"wata","ito":"ito","nakamura":"naka","kobayashi":"koba","kato":"kato","yoshida":"yoshi","ishikawa":"ishi","sasaki":"sasa","kawamoto":"kawa","kimura":"kimu","fujiwara":"fuji","hayashi":"haya","matsumoto":"matsu","inoue":"inou","okamoto":"oka","saito":"sait","nishimura":"nishi","endo":"endo","morita":"mori","yamaguchi":"yama","shimizu":"shim","kondo":"kond","takeda":"take","ueda":"ueda","noguchi":"nogu","mori":"mori","taniguchi":"tani","abe":"abe","sakamoto":"saka","nagai":"naga","miyamoto":"miya","fujita":"fuji","okada":"oka"}
+klist={"nao":"nao","satsuki":"satsuki","guma":"guma","yukikaze":"yukikaze","sakate":"sakate","sugi":"sugi","taka":"taka","tuna":"tuna","nobu":"nobu","hagi":"hagi","nagi":"nagi","hiro":"hiro","hossy":"hossy","mori":"mori","takeshi":"takeshi","makoto":"makoto","yori":"yori","yone":"yone","mita":"mita","macy":"macy"}
 
 # タイトル
 st.title("シフト作成")
