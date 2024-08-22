@@ -2,7 +2,28 @@ import streamlit as st
 import pandas as pd
 import json
 
-names_list=['admin', 'tanaka', 'satou', 'mitani', 'suzuki', 'yamada', 'takahashi', 'watanabe', 'ito', 'nakamura', 'kobayashi', 'kato', 'yoshida', 'ishikawa', 'sasaki', 'kawamoto', 'kimura', 'fujiwara', 'hayashi', 'matsumoto', 'inoue', 'okamoto', 'saito', 'nishimura', 'endo', 'morita', 'yamaguchi', 'shimizu', 'kondo', 'takeda', 'ueda', 'noguchi', 'mori', 'taniguchi', 'abe', 'sakamoto', 'nagai', 'miyamoto', 'fujita', 'okada']
+names_list=[
+  "nao",
+  "satsuki",
+  "guma",
+  "yukikaze",
+  "sakate",
+  "sugi",
+  "taka",
+  "tuna",
+  "nobu",
+  "hagi",
+  "nagi",
+  "hiro",
+  "hossy",
+  "mori",
+  "takeshi",
+  "makoto",
+  "yori",
+  "yone",
+  "mita",
+  "macy"
+]
 days_of_week = ["月曜日", "火曜日", "水曜日", "木曜日", "金曜日", "土曜日", "日曜日"]
 
 st.title("管理者用")
