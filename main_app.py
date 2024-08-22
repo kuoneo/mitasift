@@ -28,7 +28,26 @@ keylist={"nao":"nao","satsuki":"satsuki","guma":"guma","yukikaze":"yukikaze","sa
 # タイトル
 st.title("シフト作成")
 st.header("従業員一覧")
-st.write(list(keylist))
+st.write("nao",
+  "satsuki",
+  "guma",
+  "yukikaze",
+  "sakate",
+  "sugi",
+  "taka",
+  "tuna",
+  "nobu",
+  "hagi",
+  "nagi",
+  "hiro",
+  "hossy",
+  "mori",
+  "takeshi",
+  "makoto",
+  "yori",
+  "yone",
+  "mita",
+  "macy")
 
 # セッションステートの初期化
 if 'log' not in st.session_state:
