@@ -23,7 +23,7 @@ def display_schedule(schedule):
         st.write("保存された予定はありません。")
 
 # ユーザー認証情報
-klist={"nao":"nao","satsuki":"satsuki","guma":"guma","yukikaze":"yukikaze","sakate":"sakate","sugi":"sugi","taka":"taka","tuna":"tuna","nobu":"nobu","hagi":"hagi","nagi":"nagi","hiro":"hiro","hossy":"hossy","mori":"mori","takeshi":"takeshi","makoto":"makoto","yori":"yori","yone":"yone","mita":"mita","macy":"macy"}
+keylist={"nao":"nao","satsuki":"satsuki","guma":"guma","yukikaze":"yukikaze","sakate":"sakate","sugi":"sugi","taka":"taka","tuna":"tuna","nobu":"nobu","hagi":"hagi","nagi":"nagi","hiro":"hiro","hossy":"hossy","mori":"mori","takeshi":"takeshi","makoto":"makoto","yori":"yori","yone":"yone","mita":"mita","macy":"macy"}
 
 # タイトル
 st.title("シフト作成")
